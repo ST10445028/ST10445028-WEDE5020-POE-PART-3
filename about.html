@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Bellema – Pretoria’s leading fashion retailer offering affordable, stylish clothing for men, women, and children.">
+    <meta name="keywords" content="Bellema, About Bellema, Fashion Retailer, Clothing, Pretoria, Affordable Fashion">
+    <meta name="author" content="Bellema">
     <link rel="stylesheet" href="css/style.css">
+
     <title>About Us - Bellema</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo">About Us</h1>
-        <nav class="nav">
+    <header class="header" id="header">
+        <h1 class="logo" id="logo">About Us</h1>
+        <nav class="nav" id="nav">
             <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
+            <a href="about.html" class="nav-link active">About</a>
             <a href="services.html" class="nav-link">Services</a>
             <a href="enquiry.html" class="nav-link">Enquiry</a>
             <a href="contact.html" class="nav-link">Contact</a>
@@ -21,17 +25,17 @@
         </nav>
     </header>
 
-    <main class="content">
-        <img src="images/about-image-bell.jpeg" alt="Bellema Store" class="about-img">
+    <main class="content" id="main-content">
+        <img src="images/about-image-bell.jpeg" alt="Bellema Store" class="about-img" id="about-image">
 
-        <h2 class="subtitle">Our Story</h2>
-        <p class="text">
+        <h2 class="subtitle" id="our-story-title">Our Story</h2>
+        <p class="text" id="our-story-text">
             Bellema is a leading fashion retailer in Pretoria, offering a wide range of clothing and accessories for men, women, and children. 
             Our mission is to provide stylish, affordable fashion for everyone.
         </p>
 
-        <h2 class="subtitle">Organisation Overview</h2>
-        <table class="info-table">
+        <h2 class="subtitle" id="overview-title">Organisation Overview</h2>
+        <table class="info-table" id="info-table">
             <tr>
                 <td><strong>History</strong></td>
                 <td>Bellema was founded in Pretoria, South Africa. Starting as a value-focused clothing retailer, it has grown into a trusted fashion brand with a strong presence both online and in-store.</td>
@@ -55,15 +59,34 @@
             </tr>
         </table>
 
-        <h2 class="subtitle">Our Values</h2>
-        <p class="text">
+        <h2 class="subtitle" id="values-title">Our Values</h2>
+        <p class="text" id="values-text">
             <strong>Customer Focus:</strong> We put our customers at the heart of everything we do.<br>
             <strong>Integrity:</strong> We act with honesty and transparency in all our dealings.<br>
             <strong>Innovation:</strong> We embrace change and continuously seek new ways to improve.
         </p>
+
+        <!-- OpenStreetMap iframe -->
+        <h2 class="subtitle" id="map-title">Find Us</h2>
+        <p class="text">Visit our store in the heart of Pretoria:</p>
+
+        <iframe
+          id="map"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=28.1885%2C-25.7475%2C28.1905%2C-25.7455&amp;layer=mapnik&amp;marker=-25.7465%2C28.1897"
+          style="border: 1px solid black; width: 100%; height: 400px; border-radius: 10px;"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+
+        <p>
+          <a href="https://www.openstreetmap.org/?mlat=-25.7465&amp;mlon=28.1897#map=18/-25.7465/28.1897" target="_blank">
+            View Larger Map
+          </a>
+        </p>
+
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <p class="footer-text">&copy; 2025 Bellema. All rights reserved.</p>
     </footer>
 </body>

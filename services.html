@@ -2,49 +2,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- SEO META TAGS -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bellema offers expert fashion advice, personal shopping, and professional alterations to help you look and feel your best. Explore our services.">
+    <meta name="keywords" content="Bellema services, personal shopping, fashion advice, clothing alterations, Pretoria boutique">
+    <meta name="author" content="Bellema Fashion Boutique">
+    <title>Our Services | Bellema Fashion Boutique</title>
     <link rel="stylesheet" href="css/style.css">
-    <title>Services - Bellema</title>
 </head>
-<body>
-    <header class="header">
-        <h1 class="logo">Our Services</h1>
-        <nav class="nav">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="services.html" class="nav-link">Services</a>
-            <a href="enquiry.html" class="nav-link">Enquiry</a>
-            <a href="contact.html" class="nav-link">Contact</a>
-            <a href="promotions.html" class="nav-link">Promotions</a>
-            <a href="personal-shopper.html" class="nav-link">Personal Shopper</a>
-            <a href="style-blog.html" class="nav-link">Style Blog</a>
+
+<body id="services-page">
+
+    <header id="main-header" class="header">
+        <h1 id="page-title" class="logo">Our Services</h1>
+
+        <nav id="main-nav" class="nav" aria-label="Main Navigation">
+            <a href="index.html" class="nav-link" id="nav-home">Home</a>
+            <a href="about.html" class="nav-link" id="nav-about">About</a>
+            <a href="services.html" class="nav-link active" id="nav-services">Services</a>
+            <a href="enquiry.html" class="nav-link" id="nav-enquiry">Enquiry</a>
+            <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+            <a href="promotions.html" class="nav-link" id="nav-promotions">Promotions</a>
+            <a href="personal-shopper.html" class="nav-link" id="nav-shopper">Personal Shopper</a>
+            <a href="style-blog.html" class="nav-link" id="nav-blog">Style Blog</a>
         </nav>
     </header>
 
-    <main class="content">
-        <h2 class="subtitle">What We Offer</h2>
-        <p class="text">At Bellema, we offer a wide range of services to enhance your shopping experience:</p>
+    <main id="services-content" class="content">
+        <h2 id="services-subtitle" class="subtitle">What We Offer</h2>
 
-        <div class="services">
-            <div class="service-item">
-                <img src="images/services-image.jpeg" alt="Fashion Advice" class="service-img">
-                <p><strong>Fashion Advice:</strong> Our style experts are here to help you find the perfect outfit.</p>
-            </div>
+        <p id="services-intro" class="text">
+            At Bellema, we offer a wide range of services to enhance your shopping experience:
+        </p>
+<label for="service-search" class="text" style="display:block; margin-bottom:10px;">
+    Search Services:
+</label>
+<input type="text" id="service-search" placeholder="Type to filter services..." style="padding:8px; width:100%; max-width:400px; margin-bottom:20px; border:2px solid #ffccdc; border-radius:6px;">
 
-            <div class="service-item">
-                <img src="images/personalbellema-image.jpeg" alt="Personal Shopping" class="service-img">
-                <p><strong>Personal Shopping:</strong> Enjoy a tailored shopping experience with our personal shoppers.</p>
-            </div>
+        <section id="services-section" class="services" aria-label="Bellema Services">
+            
+           <div class="service-item" id="service-fashion-advice">
+    <img src="images/services-image.jpeg" 
+         alt="Fashion advice from Bellema style experts" 
+         class="service-img lightbox-img">
+    <p><strong>Fashion Advice:</strong> Our style experts are here to help you find the perfect outfit.</p>
+</div>
 
-            <div class="service-item">
-                <img src="images/alterations-image.jpg" alt="Alterations" class="service-img">
-                <p><strong>Alterations:</strong> We provide alteration services to ensure your clothes fit perfectly.</p>
-            </div>
-        </div>
+<div class="service-item" id="service-personal-shopping">
+    <img src="images/personalbellema-image.jpeg" 
+         alt="Bellema personal shopping service" 
+         class="service-img lightbox-img">
+    <p><strong>Personal Shopping:</strong> Enjoy a tailored shopping experience with our personal shoppers.</p>
+</div>
+
+<div class="service-item" id="service-alterations">
+    <img src="images/alterations-image.jpg" 
+         alt="Professional clothing alterations at Bellema" 
+         class="service-img lightbox-img">
+    <p><strong>Alterations:</strong> We provide alteration services to ensure your clothes fit perfectly.</p>
+</div>
+
+
+        </section>
     </main>
 
-    <footer class="footer">
+    <footer id="main-footer" class="footer">
         <p class="footer-text">&copy; 2025 Bellema. All rights reserved.</p>
     </footer>
+
+<div id="lightbox-overlay" class="lightbox-overlay">
+    <span id="lightbox-close" class="lightbox-close">&times;</span>
+    <img id="lightbox-image" class="lightbox-image" alt="Expanded view">
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const lightboxOverlay = document.getElementById("lightbox-overlay");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const closeBtn = document.getElementById("lightbox-close");
+
+    // Open lightbox
+    document.querySelectorAll(".lightbox-img").forEach(img => {
+        img.addEventListener("click", () => {
+            lightboxOverlay.style.display = "flex";
+            lightboxImage.src = img.src;
+            lightboxImage.alt = img.alt;
+        });
+    });
+
+    // Close lightbox
+    closeBtn.addEventListener("click", () => {
+        lightboxOverlay.style.display = "none";
+    });
+
+    // Close if clicking outside the image
+    lightboxOverlay.addEventListener("click", (e) => {
+        if (e.target === lightboxOverlay) {
+            lightboxOverlay.style.display = "none";
+        }
+    });
+
+    // Escape key closes lightbox
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            lightboxOverlay.style.display = "none";
+        }
+    });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("service-search");
+    const services = document.querySelectorAll(".service-item");
+
+    searchInput.addEventListener("input", () => {
+        const query = searchInput.value.toLowerCase();
+
+        services.forEach(service => {
+            const text = service.textContent.toLowerCase();
+            if (text.includes(query)) {
+                service.style.display = "block";
+            } else {
+                service.style.display = "none";
+            }
+        });
+    });
+});
+</script>
+
 </body>
 </html>

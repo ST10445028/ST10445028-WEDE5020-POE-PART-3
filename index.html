@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bellema – Fashion made simple, fun, and affordable in Pretoria. Explore our latest styles and trends for men, women, and children.">
+    <meta name="keywords" content="Bellema, Fashion, Pretoria, Clothing, Affordable Fashion, Trends">
+    <meta name="author" content="Bellema">
     <link rel="stylesheet" href="css/style.css">
     <title>Bellema Homepage</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo">Bellema</h1>
-        <nav class="nav">
-            <a href="index.html" class="nav-link">Home</a>
+    <header class="header" id="header">
+        <h1 class="logo" id="logo">Bellema</h1>
+        <nav class="nav" id="nav">
+            <a href="index.html" class="nav-link active">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="services.html" class="nav-link">Services</a>
             <a href="enquiry.html" class="nav-link">Enquiry</a>
@@ -21,20 +24,58 @@
         </nav>
     </header>
 
-    <main class="content">
-        <div class="hero">
-            <img src="images/hero-image.png" alt="Bellema fashion" class="hero-img">
-            <h2 class="subtitle">Welcome to Bellema</h2>
-            <p class="text">Welcome to Bellema, your go-to store in Pretoria. We keep fashion simple, fun, and affordable.
-                 Whether it’s your everyday basics or the latest trends, 
-                 you’ll find styles that fit your life and your budget.
-                 It’s fashion made for real people, just like you.</p>
-            <a href="shop-lates.html" class="btn">Shop the latest looks now</a>
-        </div>
-    </main>
+    <main class="content" id="main-content">
+    <div class="hero" id="hero-section">
+        <img src="images/hero-image.png" alt="Bellema fashion" 
+             class="hero-img fade" id="hero-image">
 
-    <footer class="footer">
+        <h2 class="subtitle fade-up" id="hero-title">Welcome to Bellema</h2>
+
+        <p class="text fade-up" id="hero-text">
+            Welcome to Bellema, your go-to store in Pretoria. We keep fashion simple, fun, and affordable.
+            Whether it’s your everyday basics or the latest trends, 
+            you’ll find styles that fit your life and your budget.
+            It’s fashion made for real people, just like you.
+        </p>
+
+        <a href="shop-lates.html" class="btn fade-up" id="hero-btn">
+            Shop the latest looks now
+        </a>
+    </div>
+</main>
+
+
+    <footer class="footer" id="footer">
         <p class="footer-text">&copy; 2025 Bellema. All rights reserved.</p>
     </footer>
+    <script>
+// Show hero image immediately
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("hero-image").classList.add("show");
+
+    // Delay text animations slightly
+    setTimeout(() => {
+        document.querySelectorAll(".fade-up, .fade").forEach(el => {
+            el.classList.add("show");
+        });
+    }, 300);
+});
+
+
+// ===== Scroll Reveal Animation =====
+const revealElements = document.querySelectorAll(".fade-up, .fade");
+
+const revealOnScroll = () => {
+    revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+            el.classList.add("show");
+        }
+    });
+};
+
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
 </body>
 </html>

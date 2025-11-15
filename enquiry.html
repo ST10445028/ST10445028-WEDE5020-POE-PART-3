@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Submit a general enquiry to Bellema – Pretoria’s leading fashion retailer. Reach out to us for questions, feedback or information.">
+    <meta name="keywords" content="Bellema, Enquiry, Fashion Retailer, Clothing, Pretoria, Contact">
+    <meta name="author" content="Bellema">
     <link rel="stylesheet" href="css/style.css">
     <title>Enquiry - Bellema</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo">Enquiry</h1>
-        <nav class="nav">
+    <header class="header" id="header">
+        <h1 class="logo" id="logo">Enquiry</h1>
+        <nav class="nav" id="nav">
             <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="services.html" class="nav-link">Services</a>
-            <a href="enquiry.html" class="nav-link">Enquiry</a>
+            <a href="enquiry.html" class="nav-link active">Enquiry</a>
             <a href="contact.html" class="nav-link">Contact</a>
             <a href="promotions.html" class="nav-link">Promotions</a>
             <a href="personal-shopper.html" class="nav-link">Personal Shopper</a>
@@ -21,31 +24,36 @@
         </nav>
     </header>
 
-    <main class="content">
-        <h2 class="subtitle">General Enquiry</h2>
-        <img src="images/enquiry-image.jpeg" alt="Contact Bellema" class="enquiry-img">
+    <main class="content" id="main-content">
+        <h2 class="subtitle" id="enquiry-title">General Enquiry</h2>
+        <img src="images/enquiry-image.jpeg" alt="Contact Bellema" class="enquiry-img" id="enquiry-image">
 
-        <p class="text">If you have any questions or enquiries, please feel free to reach out to us:</p>
+        <p class="text" id="enquiry-text">If you have any questions or enquiries, please feel free to reach out to us:</p>
 
-        <form class="enquiry-form">
-            <label for="name">Name:</label>
+        <form class="enquiry-form" id="enquiry-form">
+            <label for="name" id="label-name">Name:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email:</label>
+            <label for="email" id="label-email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="message">Message:</label>
+            <label for="message" id="label-message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
             <div class="form-buttons">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
+                <input type="submit" id="submit-btn" value="Submit">
+                <input type="reset" id="reset-btn" value="Reset">
             </div>
+
+           
+            <p id="form-status"></p>
         </form>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <p class="footer-text">&copy; 2025 Bellema. All rights reserved.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

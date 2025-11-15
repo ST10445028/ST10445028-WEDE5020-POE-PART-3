@@ -3,30 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Bellema for questions, feedback, or general enquiries. We're here to help.">
+    <meta name="keywords" content="Bellema, Contact, Fashion, Enquiry, Feedback, Support">
+    <meta name="author" content="Bellema">
     <link rel="stylesheet" href="css/style.css">
     <title>Contact Us - Bellema</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="logo">Contact Us</h1>
-        <nav class="nav">
+    <header class="header" id="header">
+        <h1 class="logo" id="logo">Contact Us</h1>
+        <nav class="nav" id="nav">
             <a href="index.html" class="nav-link">Home</a>
             <a href="about.html" class="nav-link">About</a>
             <a href="services.html" class="nav-link">Services</a>
             <a href="enquiry.html" class="nav-link">Enquiry</a>
-            <a href="contact.html" class="nav-link">Contact</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
             <a href="promotions.html" class="nav-link">Promotions</a>
             <a href="personal-shopper.html" class="nav-link">Personal Shopper</a>
             <a href="style-blog.html" class="nav-link">Style Blog</a>
         </nav>
     </header>
 
-    <main class="content">
+    <main class="content" id="main-content">
         <h2 class="subtitle">Get in Touch</h2>
-        <img src="images/contact-image.jpg" alt="Contact Bellema" class="contact-img">
+        <img src="images/contact-image.jpg" alt="Contact Bellema" class="contact-img" id="contact-image">
         <p class="text">If you have any questions or feedback, please feel free to reach out to us:</p>
 
-        <form class="contact-form">
+        <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -37,21 +40,26 @@
             <textarea id="message" name="message" rows="4" required></textarea>
 
             <div class="form-buttons">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
+                <input type="submit" id="submit-btn" value="Submit">
+                <input type="reset" id="reset-btn" value="Reset">
             </div>
+
+            <p id="form-status" class="form-status" aria-live="polite"></p>
         </form>
 
         <h2 class="subtitle">Contact Details</h2>
-        <p class="text">
+        <p class="text" id="contact-details">
             Email: <a href="mailto:info@bellema.com">info@bellema.com</a><br>
             Phone: +12 (800) 123-4567<br>
             Address: Madiba St, Shop 324, Sammy Marks Square, Pretoria 0002
         </p>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <p class="footer-text">&copy; 2025 Bellema. All rights reserved.</p>
     </footer>
+
+  
+    <script src="js/script.js"></script>
 </body>
 </html>

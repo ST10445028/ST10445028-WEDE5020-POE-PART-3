@@ -380,6 +380,111 @@ body {
 .footer-text {
   color: #333;
 }
+  .map {
+            height: 320px;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        /* ======== ANIMATIONS ======== */
+
+/* Fade + slide-up base state */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Activated when visible */
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth fade-in */
+.fade {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+/* Header slide-down animation */
+.header {
+  animation: slideDown 1.2s ease forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero image zoom-in */
+.hero-img {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+
+.hero-img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Button hover animation */
+.btn {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.07);
+}
+/* ===== LIGHTBOX ===== */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.lightbox-close:hover {
+    color: #ffccdc;
+}
+
+/* Optional image hover animation */
+.lightbox-image:hover {
+    transform: scale(1.02);
+}
+
 
 @media (max-width: 768px) {
   .nav {
